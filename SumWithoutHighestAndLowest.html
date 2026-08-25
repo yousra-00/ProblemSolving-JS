@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Without Highest And Lowest</title>
+</head>
+<body>
+    <script>
+        function SumWithoutHighestAndLowest(arr) {
+          return arr.sort((a,b)=> a-b).slice(1,-1).reduce((acc,current)=>acc +current)
+        }
+        console.log(SumWithoutHighestAndLowest([1,10,2,3,1,4,10]))
+    </script>
+</body>
+</html>

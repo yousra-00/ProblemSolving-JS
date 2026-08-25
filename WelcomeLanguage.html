@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Language</title>
+</head>
+<body>
+    <script>
+        let languages = {
+    english: "Welcome",
+    arabic: "مرحبا",
+    french: "Bienvenue",
+    spanish: "Bienvenido",
+    german: "Willkommen",
+    italian: "Benvenuto",
+    portuguese: "Bem-vindo",
+    russian: "Добро пожаловать",
+    turkish: "Hoş geldiniz",
+    japanese: "ようこそ",
+    chinese: "欢迎",
+    korean: "환영합니다"
+}
+        function WelcomeLanguage(Language) {
+            if(languages.hasOwnProperty(Language)) {
+                return languages[Language]
+            }else {
+                return languages["english"]
+            }
+        }
+        console.log(WelcomeLanguage("english"))
+        console.log(WelcomeLanguage("arabic"))
+        console.log(WelcomeLanguage("spanish"))
+    </script>
+</body>
+</html>

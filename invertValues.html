@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>invert Values</title>
+</head>
+<body>
+    <script>
+        function invertValues(array) {
+            let newarray = []
+        for(let i=0;i<array.length;i++) {
+           newarray.push(-array[i])
+        }
+        return newarray
+
+        //another solution
+         return array.map((el)=> {
+            return -el
+        })
+    }
+        console.log(invertValues([1,2,-3,4,5]))
+    </script>
+</body>
+</html>

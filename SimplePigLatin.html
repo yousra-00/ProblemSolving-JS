@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pig Latin</title>
+</head>
+<body>
+    <script>
+        function pigLtin(input) {
+            let newinput =[]
+            let output = input.split(" ")
+            for(let i=0;i<output.length;i++) {
+                let newOutput = output[i].slice(1)
+                 newinput.push(`${newOutput}${output[i][0]}ay`)
+            }
+            
+           return newinput.join(" ")
+        }
+        console.log(pigLtin("Hello World"))
+    </script>
+</body>
+</html>

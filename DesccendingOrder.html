@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descending oarder</title>
+</head>
+<body>
+    <script>
+        function DescendingOrder(num) {
+            let strNum = String(num)
+            return Number(strNum.split("").sort((a,b)=> b-a).join(""))
+        }
+        console.log(DescendingOrder(123456789))
+    </script>
+</body>
+</html>

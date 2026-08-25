@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Count</title>
+</head>
+<body>
+    <script>
+        function VowelCount(str) {
+            let vowelsInSrt = []
+            let Vowel= ["a","e","i","o","u"]
+            for(let i=0;i<Vowel.length;i++) {
+                if(str.includes(Vowel[i])) {
+                    vowelsInSrt.push(Vowel[i])
+                }
+            }
+            return vowelsInSrt.length
+        }
+        console.log(VowelCount("yousra"))
+        console.log(VowelCount("hello"))
+        console.log(VowelCount("str"))
+    </script>
+</body>
+</html>

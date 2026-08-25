@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Average</title>
+</head>
+<body>
+    <script>
+        function CalculateAverage(arr) {
+            let sum = arr.reduce((acc,current)=> {
+                return acc + current
+            },0)
+            let count = arr.length
+            return sum / count ||0
+        }
+        console.log(CalculateAverage([1,2,3,4]))
+        console.log(CalculateAverage([]))
+    </script>
+</body>
+</html>

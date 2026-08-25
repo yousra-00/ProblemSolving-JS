@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Operator</title>
+</head>
+<body>
+    <script>
+        function MathematicalOperator(Operator,value1,value2) {
+            if(Operator == "+") {
+                return value1 +value2
+            }else if(Operator == "-") {
+                return value1 -value2
+            }else if(Operator == "*") {
+                return value1 * value2
+            }else if(Operator == "/") {
+                return value1 / value2
+            }
+
+            //anothor solution
+           return eval(value1+Operator+value2)
+        }
+        console.log(MathematicalOperator("+",1,2))
+        console.log(MathematicalOperator("-",1,2))
+        console.log(MathematicalOperator("*",1,2))
+        console.log(MathematicalOperator("/",1,2))
+    </script>
+</body>
+</html>

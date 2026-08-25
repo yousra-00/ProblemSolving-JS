@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToSquareOrNotToSquareRoot</title>
+</head>
+<body>
+    <script>
+        function ToSquareOrNotToSquareRoot(arr) {
+            let newarr=[]
+            for(let i=0;i<arr.length;i++) {
+              if(Number.isInteger(Math.sqrt(arr[i]))) {
+               newarr.push(Math.sqrt(arr[i]))
+              }else {
+                newarr.push(arr[i] * arr[i])
+              }
+            }
+            return newarr
+        }
+        console.log(ToSquareOrNotToSquareRoot([8,49,7]))
+    </script>
+</body>
+</html>

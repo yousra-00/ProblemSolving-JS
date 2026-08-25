@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Readable Time</title>
+</head>
+<body>
+    <script>
+        function humanReadableTime(seconds) {
+            let hours = Math.floor(seconds/3600)
+            let minutes = Math.floor((seconds % 3600) / 60)
+            let remainingSeconds = Math.floor(seconds % 60)
+            return `${FormatTime(hours)}:${FormatTime(minutes)}:${FormatTime(remainingSeconds)}`
+        }
+        function FormatTime(time) {
+            let strTime = String(time)
+            if(time < 2) {
+                return "0" + strTime
+            }
+            return strTime
+        }
+        console.log(humanReadableTime(300))
+    </script>
+</body>
+</html>

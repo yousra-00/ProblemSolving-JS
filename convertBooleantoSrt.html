@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Boolean to string</title>
+</head>
+<body>
+    <script>
+        function ConvertBooleantostring(arr) {
+            let newarr =[]
+           for(let i=0;i<arr.length;i++) {
+            if(arr[i] == true) {
+                newarr.push("Yes")
+            }else {
+                newarr.push("No")
+            }
+           }
+           return newarr
+        }
+        console.log(ConvertBooleantostring([true,false,true]))
+        console.log(ConvertBooleantostring([true,true,true]))
+        console.log(ConvertBooleantostring([false,false,false]))
+    </script>
+</body>
+</html>

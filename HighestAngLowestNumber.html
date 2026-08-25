@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest and Lowest Number</title>
+</head>
+<body>
+    <script>
+        function HighestandLowestNumber(numbers) {
+            let arrNumbers = numbers.split("").map((el)=> {
+                return +el
+            })
+            let high = Math.max(...arrNumbers)
+            let low = Math.min(...arrNumbers)
+            return (String(high) + " " + String(low))
+
+            //another solution
+             let numbersarray = numbers.split("").map((el)=> {
+                return +el
+            }).sort((a,b)=> a -b)
+            return `${arrNumbers[arrNumbers.length -1]} ${arrNumbers[0]}`
+        }
+        console.log(HighestandLowestNumber("1 2 3 4"))
+    </script>
+</body>
+</html>
