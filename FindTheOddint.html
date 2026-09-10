@@ -8,12 +8,25 @@
 <body>
     <script>
         function FindtheOddint(arr) {
+
            let oddint= arr.reduce((a,b)=> {
                 return a^b
             },0)
             return oddint
+
+            //another solution 
+             let countmap = new Map()
+            for(const num of arr){
+                countmap.set(num, (countmap.get(num) || 0) +1)
+            }
+            // console.log(countmap.entries())
+           for(let [num , count] of countmap.entries()) {
+            if( count % 2 !== 0) {
+                return num
+            }
+           }
         }
-        console.log(FindtheOddint([1,1,2,3,4,4,2,3,3]))
+        console.log(FindtheOddint([1,1,2,3,4,4,2,3,3,3,4]))
     </script>
 </body>
 </html>

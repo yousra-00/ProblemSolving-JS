@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exes and ohs</title>
+</head>
+<body>
+    <script>
+        function xo(str) {
+            let o = str.split("").filter((el)=> {
+                return el == "o" || el == "O"
+            })
+            let x = str.split("").filter((el)=> {
+                return el == "x" || el == "X"
+            })
+            return o.length == x.length
+        }
+        console.log(xo("xxoo"))
+        console.log(xo("xxo"))
+        console.log(xo("Xxo"))
+        console.log(xo("XxoO"))
+        console.log(xo("hi"))
+    </script>
+</body>
+</html>

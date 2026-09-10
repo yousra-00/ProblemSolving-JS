@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't give me 5</title>
+</head>
+<body>
+    <script>
+        function notFive(start,end) {
+            let arrNumbers = []
+           for(let i= start;i<=end ; i++) {
+          
+            if(!String(i).includes("5")) {
+                arrNumbers.push(i)
+                
+            }
+           }
+        //   return arrNumbers.reduce((acc,current)=> {
+        //     return acc + current
+        //   })
+           return arrNumbers.length
+        }
+        console.log(notFive(1,15))
+        console.log(notFive(4,17))
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jaden casing strings</title>
+</head>
+<body>
+    <script>
+        function jadenCasing(str) {
+            return str.split(" ").map((el)=> {
+                return el.charAt(0).toUpperCase() + el.slice(1)
+            }).join(" ")    
+        }
+        console.log(jadenCasing("i'am computer science student"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle Character</title>
+</head>
+<body>
+    <script>
+        function middleCharacter(str) {
+            return str.length % 2 == 0 ? str[(str.length/2) -1] + str[(str.length/2)]  : str[(Math.ceil(str.length / 2))-1]
+        }
+        console.log(middleCharacter('yousra'))
+        console.log(middleCharacter('css'))
+        console.log(middleCharacter('y'))
+    </script>
+</body>
+</html>

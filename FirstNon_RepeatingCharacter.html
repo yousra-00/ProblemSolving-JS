@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First non repeating Character</title>
+</head>
+<body>
+    <script>
+        function nonrepeatingCharacter(str) {
+            if(!str) return ""
+            let mappedObj = new Map()
+            for(let i =0 ; i < str.length;i++){
+                // console.log(str[i])
+                let counter = mappedObj.get(str[i]) ? mappedObj.get(str[i]) : 0 ;
+                // console.log(counter)
+                mappedObj.set(str[i] , counter +1)
+                // console.log(mappedObj)
+            }
+            let repeatingCount =  [...mappedObj].sort((a,b)=>a[1]-b[1])[0][1] 
+            return repeatingCount>1 ? "" :[...mappedObj].sort((a,b)=>a[1]-b[1])[0][0] 
+        }
+        console.log(nonrepeatingCharacter("yyyyouuuusssraaa"))
+        console.log(nonrepeatingCharacter("yyyy"))
+        console.log(nonrepeatingCharacter(""))
+    </script>
+</body>
+</html>
