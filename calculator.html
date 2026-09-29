@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <script>
+        function calc(price) {
+            if(price>0) {
+                let roundedPrice=Number(price.toFixed(2))
+                let priceWithTax=roundedPrice + (roundedPrice * 0.15)
+                 priceWithTax=Number(priceWithTax.toFixed(2))
+                 let result=priceWithTax.toString().padStart(8,'$')
+                    return result
+
+            }else {
+                return `invalid price`
+            }
+           
+        }
+        console.log(calc(1909))
+        console.log(calc(12.987));
+        console.log(calc(-4));
+    </script>
+</body>
+</html>

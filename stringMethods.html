@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Str methods</title>
+</head>
+<body>
+    <script>
+        let messyString = "   Hello,My,Name,Is,Yousra   "; 
+        let result = messyString.trim().replaceAll(',','-').toLowerCase().split("-")
+        console.log(result)
+        console.log(result[0].length)
+    </script>
+</body>
+</html>
